@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAVACSRIPT Demo</title>
+  <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+  <h1 class="heading">PRACTISING JAVACSRIPT</h1>
+
+  <p id="hello" style="cursor: pointer;">Hello</p>
+  <p>Hi</p>
+
+  <section class="contact" id="contact">
+    <form>
+      <div>
+        <p class="msg error"></p>
+      </div>
+      <label for="name">Name&nbsp;:</label>
+      <input type="text" name="name" id="name" placeholder="Enter your name"/><br>
+      <label for="email">Email&nbsp;:</label>
+      <input type="email" name="email" id="email" placeholder="Enter your mail-id"/><br>
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </section>
+
+  <section class="contact-list" id="contact-list">
+    <h2>ITEMS LIST</h2><br>
+    <button type="submit" id="toggle">Toggle</button>
+    <ul>
+      <li class="item">One</li>
+      <li class="item">Two</li>
+      <li class="item">Three</li>
+    </ul>
+  </section>
+
+  <br><br>
+  <hr>
+  <hr>
+<!-- Here javascript file is events.js-->
+  <h2>setTimeout Event</h2>
+  <button onclick="console.log('Timer started!'); timeroutId1=setTimeout(st,2000);">Start button</button>
+  <button onclick="console.log('Timer stopped!'); clearTimeout(timeroutId1);">Stop button</button>
+  <br><br>
+  <hr><hr>
+  <h2>setInterval Event</h2>
+  <button onclick="console.log('Time started!'); setIntervalID1=setInterval(si,3000);">Start Button</button>
+  <button onclick="console.log('Time stopped!'); clearInterval(setIntervalID1);">Stop Button</button>
+
+  <br><br>
+  <hr><hr>
+  <!--For events "click" and "double click"-->
+  <button type="submit" id="click">Click</button><br>
+  <button type="submit" id="dclick">Double Click</button>
+
+  <br><br>
+  <hr><hr>
+
+  <!--For Event types explanation-->
+  <div id="parent">
+    <div id="child"></div>
+  </div>
+
+  <br><br>
+  <hr><hr><br><br>
+  <!--For Event: preventDefault()-->
+  <a href="https://www.amazon.in/minitv" id="minitv">Amazon Mini TV</a>
+  <br><br>
+  <hr><hr><br><br>
+  <!--For Event:stopPropagation()-->
+  <div id="gp" style="margin: 20px; color: green;">
+    <div id="p" style="color: green;">
+      <div id="c" style="color: green;"></div>
+    </div>
+  </div>
+
+  <br><br>
+  <hr><hr><br><br>
+  <!--Difference for normal and arrow function-->
+  <button id="fun">Click</button>
+  <br><br>
+
+  <script src="script.js"></script>
+  <script src="variable and operators.js"></script>
+  <script src="datatype.js"></script>
+  <script src="string_methods.js"></script>
+  <script src="array.js"></script>
+  <script src="object.js"></script>
+  <script src="array_of_objects.js"></script>
+  <script src="loop.js"></script>
+  <script src="conditional_statement.js"></script>
+  <script src="function.js"></script>
+  <script src="constructors.js"></script>
+  <script src="high_order_array_functions.js"></script>
+  <script src="Window_DOM_Manipulation.js"></script>
+  <script src="events.js"></script>
+  <script src="form_validation.js"></script>
+  <script src="promises and aync-await.js"></script>
+</body>
+</html>
