@@ -15,3 +15,17 @@ console.log(lastname.replace("Junior","Santos"));
 console.log(container);
 console.log(container.split(","));//This function will return array type.
 // ['Neymar', ' Junior', ' Da', ' Santos']----> Output
+
+
+// ## ES6 property : Template Literals/String:
+
+//Example-1:
+const firstname1="Sudhamoy"
+const lastname1="Dey"
+const city="Guwahati"
+
+//Normal method:
+console.log(firstname1+' '+lastname1+' '+"is from "+city);
+//template literal method:
+console.log(`${firstname1} ${lastname1} is from ${city}`);
+

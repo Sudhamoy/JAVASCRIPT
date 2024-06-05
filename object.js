@@ -47,6 +47,7 @@ console.log(employee1.fulldesignation()); //Calling Function
 // (3) ES6 Destructuring:
 //Destructuring is an efficient way to extract multiple values from data that is stored in arrays or objects. When destructuring an array, we use their positions (or index) in an assignment.
 
+//EXAMPLE-1:
 //(i) For objects:
 const {id,age} = employee1;
 console.log(id);
@@ -58,6 +59,44 @@ var [marks1,marks2,marks3]=marks;
 console.log(marks1);
 console.log(marks2);
 console.log(marks3);
+
+//EXAMPLE-2:
+//FOR ARRAY:
+const arr=[1,2,3,4,5];
+
+  //normal method:
+  const firstindex=arr[0];
+  const thirdindex=arr[2];
+  console.log(firstindex,thirdindex);
+
+  //destructuring of array:
+  const[fi1,,t3]=arr;
+  console.log(fi1,t3);
+
+
+// FOR OBJECT:
+const obj={
+  age2:12,
+  name:"Sudhamoy",
+  position:"SDE"
+};
+
+  //Normal method:
+  const a1=obj.age2;
+  const p=obj.position;
+  console.log(a1,p)
+
+  //destructuring of object:
+  const {age2,position:designation}=obj;
+  console.log(age2,designation)
+
+//FOR function:
+const displaydetails=(user)=>{
+  const {age2,name,position}=user;
+  console.log(`${name} of ${age2} years old is now a ${position}`);
+}
+displaydetails(obj)
+
 
 //(4) Another way of creating object(Using "new" keyword):
 
@@ -183,5 +222,57 @@ for(var entry of entries1){
   console.log(entry[0][1]);
 }
 
+
+//ES6 propety : Object Property Assignment:
+
+
+const firstnam="Sudhamoy"
+const surname="Dey"
+const object3={ firstnam,surname}
+console.log(object3)
+
+//Earlier it was like that:
+
+/*
+const firstnam="Sudhamoy"
+const surname="Dey"
+
+const object3={
+  firstnam:firstnam,
+  surname:surname
+  }
+
+console.log(object3)
+*/
+
+//ES6 property : property value over-writing in objects.
+
+//Example-1:
+const object4={
+  a:5,
+  b:10,
+  c:15
+}
+
+//Q: Now make a copy of object4 with a=500 value:
+
+const object5={
+  ...object4, //using spread operator
+  a:500
+}
+
+//OR
+const object6={
+  a:5,
+  b:10,
+  c:15,
+  a:500
+}
+
+//Note: if we use a property more than once then, it will take the value assigned at the end(final)
+
+console.log(object4)
+console.log(object5)
+console.log(object6)
 
 

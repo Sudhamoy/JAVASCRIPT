@@ -57,6 +57,9 @@ function nested(hellofn){
 }
 
 console.log(nested(greet));
+
+//Anonymous function : https://www.geeksforgeeks.org/javascript-anonymous-functions/
+//Part-1:
 //Function Expression:
 //(1)
 let add = function (a1,a2){
@@ -73,6 +76,7 @@ console.log(result_subs);
 
 //Note: function is not hoisted for function expression but works in function declaration.
 
+//Part-2:
 //ES6 Arrow Function:
 //(1)
 const showtext=(x6,x7)=>{
@@ -89,14 +93,61 @@ const showtext2=(x8,x9)=>{
 }
 console.log(showtext2());
 
+//(3)
+// Single line arrow function: (when we have only one expression):
+//(i)
+const showcase1=()=>console.log("single line arrow function!!");
+showcase1();
 
-//IIFE : Immediate Invoking of Functional Expression
+//(ii)
+const summation=(su1,su2) =>  su1 + su2 //works as "return su1 + su2"
+console.log(summation(10,20));
+
+//
+const summation1=(su3 , su4)=>{
+  su3=10;
+  su4=20;
+  return su3 + su4
+}
+console.log(summation1());
+
+//(iii)
+const object_function=()=>{
+  return object_1={
+    name:"Sudhamoy",
+    age:22
+  }
+}
+console.log(object_function());
+
+// Single line function of the previous one.(bcz it has only one functional expression)
+const object_function1=()=> object_1={
+  name:"Sudhamoy",
+  age:22
+}
+
+console.log(object_function1());
+
+// without declaring object name:
+const object_function2=()=> ({
+  name:"Sudhamoy",
+  age:22
+})
+
+console.log(object_function2());
+
+
+
+
+//## IIFE : Immediate Invoking of Functional Expression
 //(1)
 (function iife(){
   console.log("IIFE");
 })();
 
-//Closures : function + lexical scope:
+
+
+//## Closures : function + lexical scope:
 //(1)
 function outer(){
   var closurevariable=66;
@@ -106,6 +157,8 @@ function outer(){
   inner();
 }
 outer();
+
+
 
 // Constructor Object:
 //####
@@ -126,7 +179,9 @@ const oneplus=new Mobile("Oneplus","$250","09/09/2024");
 console.log(s23);
 console.log(oneplus);
 
-//Prototype Property:
+
+
+//## Prototype Property:
 //It is a good practice to alter prototype method for practising.
 Mobile.prototype.ram="4GB";
 Mobile.prototype.rom="8GB";

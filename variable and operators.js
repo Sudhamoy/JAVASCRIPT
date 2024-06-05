@@ -182,5 +182,53 @@ console.log(i);//5
 var variab1=510;
 console.log(variab1); //510
 
-//This creates overriding problem. 
+//This creates overriding problem.
 
+
+
+//ES6 :
+//Spread Operator:
+//Example-1:
+
+const array1=[10,20,30,40,50]
+console.log(array1)
+
+//create a new array of structure(value) like array1.
+const array2=[...array1] //using spread operator
+console.log(array2)
+
+array1[2]=100
+console.log(array1)//Here the array will be [10,20,100,40,50]
+console.log(array2)//Here the array will be [10,20,30,40,50]
+
+
+//Example-2:
+//Now, if we have done like the below implementation:
+const array3=[1,2,3,4]
+const array4=array3
+//then, the array4 will also get change when we change any value from array3, because objects, arrays are reference type (no-primitive data-type).
+
+//NOTE: primitive data type directly get assigned as it stored in stack memory, whereas non-primitive data-type stored in heap memory.
+//the data type which get stored in heap memory see the reference structure pointer .
+
+array3[2]=7
+console.log(array3)
+console.log(array4)
+//both got changed. thats why when making a copy of any refernce type data, use "spread operator".
+
+
+//Example-3:
+const object1={
+  a:10,
+  b:20
+}
+
+console.log(object1)
+
+const object2={...object1}
+console.log(object2)
+
+
+//Example-4:
+const array=[100,200,300]
+console.log(...array)
