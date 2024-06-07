@@ -105,7 +105,7 @@ myPromise2.then((data2)=>{
 
 
 //##Promise chaining:
-/*
+/* EXAMPLE:
   (i)clean the room
   (ii)put the garbage in a can
   (iii) then go to eat ice-cream
@@ -405,3 +405,39 @@ console.log(number2);
 console.log(eval(2*2));
 /* console.log(eval("dediuu * 2")); */ //It will stop working here only and will not print "hey" of next line because we havn't use try catch block and so if a program get any runtime error, it stops there only.
 console.log("hey");
+
+
+
+
+//## PROMISE FUNCTION:
+
+//Normal Promise creation
+const myPromise9=new Promise((resolve,reject)=>{
+  resolve("success");
+})
+console.log(myPromise9);
+
+myPromise9.then(()=>{
+  console.log("SUCCESSFUL!!")
+}).catch(()=>{
+  console.log("FAILED")
+})
+console.log(myPromise9);
+
+//Promise function creation:
+
+const myPromise10=(()=>{
+  return new Promise(()=>{
+    resolve("promise function")
+  })
+})
+/* OR,
+
+const myPromise10=()=> new Promise(()=>{
+    resolve("promise function")
+  })
+ //Single line expression in arrow function
+
+*/
+
+console.log(myPromise10);
