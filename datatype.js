@@ -3,13 +3,14 @@
 
 let name='Sudhamoy';
 console.log(name);
-console.log(typeof name);
-console.log(typeof(name));
+console.log(typeof name); //string
+console.log(typeof(name)); //string
 
 
 let firstName,lastName;
 firstName = 'Sudhamoy'
 lastName='Dey'
+//concatenate
 console.log(firstName+" "+lastName);
 console.log(firstName,lastName);
 

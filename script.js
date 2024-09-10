@@ -7,4 +7,5 @@ console.log("I am an output");
 console.error("I am an error");
 console.warn("I am a warning");
 console.info("I am an info");
+console.debug("Try to debug")
 

@@ -19,7 +19,7 @@ const r=0.5;//we cannot reassign a const
 //(v) Arithmatic (+,-,/,*)
 //(vi) Unary (++a, a++, --a, a--)
 
-//Basic Operators:
+//Basic Operators: (Arithmetic)
 console.log(x+y);
 console.log(z-x);
 console.log(x*y);
@@ -136,10 +136,10 @@ if(true){
 //So, let,const have block level scope and var don't have any block scope, it has functional scope(if there is a function in the program) and global scope.
 
 //(2) Reassignment:
-//Note : allowed in case of "const" but allowed in "var" and "let" case.
+//Note : not allowed in case of "const" but allowed in "var" and "let" case.
 
 //(3) Redeclaration:
-//Note : allowed in case of "const" and "let" but allowed in "var" case.
+//Note : not allowed in case of "const" and "let"(cannot redclare block scoped variable) but allowed in "var" case.
 var redc1=10;
 var redc1=20;
 console.log(redc1); //updated value:20
